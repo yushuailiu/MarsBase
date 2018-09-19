@@ -1,0 +1,8 @@
+CREATE TABLE `user_cart`(
+  `id` INT NOT NULL AUTO_INCREMENT COMMENT '自增id',
+  `product_id` INT NOT NULL COMMENT '产品id',
+  `count` INT NOT NULL COMMENT '产品数量',
+  `updated_at` DATETIME NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  primary key (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
