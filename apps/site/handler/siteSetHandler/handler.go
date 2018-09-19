@@ -8,6 +8,9 @@ import (
 	"encoding/json"
 )
 
+func Hello(ctx iris.Context) {
+	myhttp.DefaultSuccess(ctx, "hello world!")
+}
 func GetSiteSet(ctx iris.Context) {
 	siteSet := siteSetRepository.GetSiteSet()
 

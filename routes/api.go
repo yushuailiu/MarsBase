@@ -3,7 +3,7 @@ package routes
 import (
 	"github.com/kataras/iris"
 	"github.com/yushuailiu/MarsBase/apps/user/handlers/userHandler"
-	"github.com/yushuailiu/MarsBase/apps/payment/handlers/teegonHandler"
+	"github.com/yushuailiu/MarsBase/apps/site/handler/siteSetHandler"
 )
 
 func InitApiRoutes(app *iris.Application) {
@@ -13,5 +13,6 @@ func InitApiRoutes(app *iris.Application) {
 
 func initArticleRoutes(route iris.Party) {
 	route.Get("/articles", userHandler.Login)
-	route.Get("/create/order", teegonHandler.CreateOrder)
+	route.Get("/site/set", siteSetHandler.GetSiteSet)
+	route.Get("/hello", siteSetHandler.Hello)
 }
